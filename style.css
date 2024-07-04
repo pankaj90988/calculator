@@ -10,7 +10,7 @@ body {
 }
 
 .main-container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,9 +43,6 @@ h1 {
     }
 }
 
-.display {
-    /* border: 2px solid blue; */
-}
 
 #outputDisplay {
     width: 100%;
