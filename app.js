@@ -3,6 +3,7 @@ let displayText = document.querySelector("#outputDisplay")
 let togglebtn = document.querySelector(".toggle")
 let body = document.querySelector("body")
 let outputdisplay = document.querySelector("#outputDisplay")
+let movertext = document.querySelector(".movetext")
 
 let currenMode = "white";
 displayText.value = ""
@@ -45,6 +46,7 @@ function changeMode() {
         currenMode = "black";
         togglebtn.style.backgroundColor = "orangered"
         togglebtn.style.color = "white"
+        movertext.style.color = "white"
     } else {
         body.style.backgroundColor = "white";
         outputdisplay.style.backgroundColor = "white";
@@ -52,6 +54,8 @@ function changeMode() {
         togglebtn.style.backgroundColor = "white"
         togglebtn.style.color = "black"
         currenMode = "white"
+        movertext.style.color = "black"
+
     }
 }
 
