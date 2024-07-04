@@ -23,6 +23,7 @@ body {
 h1 {
     font-size: 3rem;
     color: orangered;
+    border-radius: 5px;
     padding: 0.3rem 1rem;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -107,4 +108,12 @@ h1 {
 .toggleonwhite:hover {
     background: orangered;
     color: white;
+}
+marquee{
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+}
+marquee span{
+    color: orangered;
+    font-weight: 600;
 }
