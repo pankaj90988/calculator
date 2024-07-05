@@ -4,9 +4,10 @@ let togglebtn = document.querySelector(".toggle")
 let body = document.querySelector("body")
 let outputdisplay = document.querySelector("#outputDisplay")
 let movertext = document.querySelector(".movetext")
+displayText.focus();
 
 let currenMode = "white";
-displayText.value = ""
+let string = "";
 
 function addInput(e) {
     let inputText = e.target.innerText;
@@ -14,20 +15,17 @@ function addInput(e) {
     if (inputText == "AC") {
         displayText.value = "";
     } else if (inputText == "Del") {
-        for (let i = 0; i < displayText.value.length; i++) {
-            displayText.value = displayText.value.slice(0, displayText.value.length - 1);
-
-            console.log(displayText.value.length)
-        }
+        displayText.value = displayText.value.substring(0, displayText.value.length - 1);
+        console.log(displayText.value.length)
 
     } else if (inputText == "=") {
-        if(displayText.value.length > 0){
-            displayText.value = eval(displayText.value)
-        }else{
-            displayText.value = "";
+        if (displayText.value.length > 0) {
+            displayText.value = eval(displayText.value);
+            displayText.value = string;
+        } else {
+            displayText.value = " ";
         }
-        
-        
+
     } else {
         displayText.value += inputText.replaceAll("x", "*");
     }
