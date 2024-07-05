@@ -1,13 +1,12 @@
-let buttons = document.querySelectorAll(".inputbtn")
-let displayText = document.querySelector("#outputDisplay")
-let togglebtn = document.querySelector(".toggle")
-let body = document.querySelector("body")
-let outputdisplay = document.querySelector("#outputDisplay")
-let movertext = document.querySelector(".movetext")
+let buttons = document.querySelectorAll(".inputbtn");
+let displayText = document.querySelector("#outputDisplay");
+let togglebtn = document.querySelector(".toggle");
+let body = document.querySelector("body");
+let outputdisplay = document.querySelector("#outputDisplay");
+let movertext = document.querySelector(".movetext");
 displayText.focus();
 
 let currenMode = "white";
-let string = "";
 
 function addInput(e) {
     let inputText = e.target.innerText;
@@ -16,14 +15,13 @@ function addInput(e) {
         displayText.value = "";
     } else if (inputText == "Del") {
         displayText.value = displayText.value.substring(0, displayText.value.length - 1);
-        console.log(displayText.value.length)
+        console.log(displayText.value.length);
 
     } else if (inputText == "=") {
         if (displayText.value.length > 0) {
             displayText.value = eval(displayText.value);
-            displayText.value = string;
         } else {
-            displayText.value = " ";
+            alert("Please enter some input\nThanks for using me");
         }
 
     } else {
@@ -56,7 +54,5 @@ function changeMode() {
 
     }
 }
-
-
 
 togglebtn.addEventListener('click', changeMode)
