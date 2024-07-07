@@ -41,6 +41,10 @@ h1 {
     .card {
         width: 100%;
     }
+    .all-btn-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    } 
 }
 
 
@@ -58,15 +62,18 @@ h1 {
 }
 
 .all-btn-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
     gap: 1rem;
     padding: 1rem 0.3rem 0rem;
     width: 100%;
+    /* object-fit: contain; */
     
     /* border: 2px solid green; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .inputbtn {
@@ -86,9 +93,9 @@ h1 {
     color: white;
 }
 
-#equal-btn {
-    width: 40%;
-}
+/* #equal-btn { */
+    /* width: 40%; */
+/* } */
 
 .toggle {
     padding: 0.5rem;
